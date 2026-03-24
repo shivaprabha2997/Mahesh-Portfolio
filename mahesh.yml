@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bootstrap       
+  name: portfolio       
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bootstrap
+      app: portfolio
   template:
     metadata:
       labels:
-        app: bootstrap
+        app: portfolio
     spec:
       containers:
-      - name: bootstrap
-        image: mahesh2452/bootstrap:latest
+      - name: portfolio
+        image: mahesh2452/portfolio:latest
         ports:
         - containerPort: 80   
 ---
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: bootstrap
+    app: portfolio
   ports:
     - protocol: TCP
       port: 80
