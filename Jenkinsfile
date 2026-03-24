@@ -2,13 +2,13 @@ pipeline {
     agent any
     environment {
         DOCKER_USER = "mahesh2452"
-        IMAGE_NAME = "bootstrap"
+        IMAGE_NAME = "portfolio"
         IMAGE_TAG = "latest"
     }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Mahesh1-code141/Electro_Bootstrap.git'
+                git branch: 'main', url: 'https://github.com/Mahesh1-code141/Mahesh-Portfolio.git'
             }
         }
         stage('Build Image') {
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh '''
                 kubectl apply -f mahesh.yml
-                kubectl rollout status deployment/bootstrap
+                kubectl rollout status deployment/portfolio
                 '''
             }
         }
