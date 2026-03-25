@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Mahesh1-code141/Mahesh-Portfolio.git'
+                git branch: 'main', url: 'https://github.com/shivaprabha2997/Mahesh-Portfolio.git'
             }
         }
         stage('Build Image') {
