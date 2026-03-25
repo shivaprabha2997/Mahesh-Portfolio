@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_USER = "mahesh2452"
+        DOCKER_USER = "shivadocker2997"
         IMAGE_NAME = "portfolio"
         IMAGE_TAG = "latest"
     }
